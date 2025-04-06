@@ -20,5 +20,7 @@ return {
 
 ## Usage
 
-StartFocus 10
--- Starts a 10min work session
+| Command | Function |
+|--|--|
+| `StartFocus 25` | starts a 45min session |
+|--|--|
