@@ -24,3 +24,4 @@ return {
 |--|--|
 | `StartFocus 25` | starts a 45min session |
 |--|--|
+|`StartBreake 15` | starts a 15min break |
