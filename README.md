@@ -1,13 +1,13 @@
-#A pomodo like app to use inside neovim
+# A pomodo like app to use inside neovim
 
-##Instalation
-###Dependecies
+## Instalation
+### Dependecies
 libnotify
-'''shell
+```shell
 sudo apt install libnotify-bin
-'''
+```
 
-'''lua
+```lua
 return {
   {
     "pedrosanto90/focus.nvim",
@@ -16,9 +16,9 @@ return {
     end
   }
 }
-'''
+```
 
-##Usage
+## Usage
 
 StartFocus 10
 -- Starts a 10min work session
