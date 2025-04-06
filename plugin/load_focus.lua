@@ -1,11 +1,19 @@
 vim.api.nvim_create_user_command("StartFocus", function(opts)
-  require("focus").focus_start(opts.args)
+  local time = tonumber(opts.args)
+  if not time then
+    time = 45
+  end
+  require("focus").focus_start(time)
 end, {
-  nargs = 1
+  nargs = "?"
 })
 
 vim.api.nvim_create_user_command("StartBreak", function(opts)
-  require("focus").break_start(opts.args)
+  local time = tonumber(opts.args)
+  if not time then
+    time = 15
+  end
+  require("focus").break_start(time)
 end, {
-  nargs = 1
+  nargs = "?"
 })

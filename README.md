@@ -22,6 +22,10 @@ return {
 
 | Command | Function |
 |--|--|
-| `StartFocus 25` | starts a 45min session |
+| `StartFocus 25` | starts a 25min session |
 |--|--|
-|`StartBreake 15` | starts a 15min break |
+|`StartBreake 10` | starts a 10min break |
+|--|--|
+|`StartFcous` | starts a default session of 45min |
+|--|--|
+|`StartBreak` | starts a default break of 15min |  
