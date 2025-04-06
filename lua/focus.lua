@@ -2,11 +2,13 @@ local M = {}
 
 local timer = vim.loop.new_timer()
 
-local start = function(iTime)
+local focus_start = function(iTime)
   local time = iTime * 60
   timer:start(0, 1000, vim.schedule_wrap(function()
     if time <= 0 then
       timer:stop()
+      vim.system({ "spd-say", "work session done" })
+      vim.system({ "notify-send", "-u", "normal", "-i", "alarm-symbolic", "Pomodoro", " Work Session done!" })
       vim.notify("Let's take a 5min brake", "info")
     else
       time = time - 1
@@ -16,7 +18,7 @@ local start = function(iTime)
   end))
 end
 
-M.start = start
-start(1)
+M.focus_start = focus_start
+-- start(1)
 
 return M
