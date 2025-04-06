@@ -7,7 +7,7 @@ local focus_start = function(i_time, on_finish)
   timer:start(0, 1000, vim.schedule_wrap(function()
     if time <= 0 then
       timer:stop()
-      vim.system({ "spd-say", "work session done" })
+      -- vim.system({ "spd-say", "work session done" })
       -- vim.system({ "notify-send", "-u", "normal", "-i", "alarm-symbolic", "Pomodoro", " Work Session done!" })
       vim.notify("Let's take a break?", "info")
 
@@ -27,7 +27,7 @@ local break_start = function(i_time, on_finish)
   timer:start(0, 1000, vim.schedule_wrap(function()
     if time <= 0 then
       timer:stop()
-      vim.system({ "spd-say", "Let's get some work done" })
+      -- vim.system({ "spd-say", "Let's get some work done" })
       -- vim.system({ "notify-send", "-u", "normal", "-i", "alarm-symbolic", "Pomodoro", "Break is over!" })
       vim.notify("Let's get some work done", "info")
 
